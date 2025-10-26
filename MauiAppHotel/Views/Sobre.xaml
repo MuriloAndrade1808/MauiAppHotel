@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="{StaticResource Gray900}">
+    
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+        
+        <Label Text="Sobre"
+               FontFamily="Trajan"
+               FontSize="35"
+               TextColor="{StaticResource White}"
+               HorizontalOptions="Center"/>
+
+        <Frame>
+            <VerticalStackLayout>
+                <Label Text="Informações do Aplicativo"
+                       HorizontalOptions="Center"
+                       FontFamily="Bombardier"
+                       FontSize="15"/>
+                <HorizontalStackLayout Margin="10">
+                    <Label Text="Desenvolvedor: "
+                           FontFamily="Bombardier"
+                           FontSize="15"
+                           TextColor="{StaticResource Gray400}"
+                           VerticalOptions="Center"/>
+                    <Label Text=" Murilo Andrade"
+                           FontFamily="Bombardier"
+                           FontSize="20"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="10">
+                    <Label Text="Ano de Desenvolvimento: "
+                           FontFamily="Bombardier"
+                           FontSize="15"
+                           TextColor="{StaticResource Gray400}"
+                           VerticalOptions="Center"/>
+                    <Label Text=" 2025"
+                           FontFamily="Bombardier"
+                           FontSize="20"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="10">
+                    <Label Text="Fontes Utilizadas: "
+                           FontFamily="Bombardier"
+                           FontSize="15"
+                           TextColor="{StaticResource Gray400}"
+                           VerticalOptions="Center"/>
+                    <Label Text=" Bombardier "
+                           FontFamily="Bombardier"
+                           FontSize="20"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Fontes Utilizadas  : "
+                           FontFamily="Bombardier"
+                           FontSize="15"
+                           TextColor="{StaticResource Black}"
+                           VerticalOptions="Center"/>
+                    <Label Text=" Andy "
+                           FontFamily="Andy"
+                           FontSize="25"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Fontes Utilizadas  : "
+                           FontFamily="Bombardier"
+                           FontSize="15"
+                           TextColor="{StaticResource Black}"
+                           VerticalOptions="Center"/>
+                    <Label Text=" Trajan "
+                           FontFamily="Trajan"
+                           FontSize="18"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="10">
+                    <Label Text="Ferramentas Utilizadas: "
+                           FontFamily="Bombardier"
+                           FontSize="15"
+                           TextColor="{StaticResource Gray400}"
+                           VerticalOptions="Center"/>
+                    <Label Text=" Visual Studio"
+                           FontFamily="Bombardier"
+                           FontSize="20"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="   Ferramentas Utilizadas: "
+                           FontFamily="Bombardier"
+                           FontSize="15"
+                           TextColor="{StaticResource Black}"
+                           VerticalOptions="Center"/>
+                    <Label Text=" NetMAUI"
+                           FontFamily="Bombardier"
+                           FontSize="20"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+        <Button Text="Voltar"
+                Margin="10"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"
+                BackgroundColor="{StaticResource Gray100}"/>
+    </VerticalStackLayout>
+</ContentPage>
