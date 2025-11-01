@@ -68,7 +68,9 @@
                        FontSize="20"/>
 
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione sua Acomodação"/>
+                        Title="Selecione sua Acomodação"
+                        FontFamily="Bombardier"
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
                        Margin="10">
@@ -79,20 +81,28 @@
                                FontSize="20"/>
                         <HorizontalStackLayout HorizontalOptions="Center">
                             <Label Text="Check-in:"
-                                   VerticalOptions="Center"/>
+                                   VerticalOptions="Center"
+                                   FontFamily="Bombardier"
+                                   FontSize="15"
+                                   TextColor="{StaticResource Gray100}"/>
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy"/>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout HorizontalOptions="Center">
                             <Label Text="Check-out:"
-                                   VerticalOptions="Center"/>
+                                   VerticalOptions="Center"
+                                   FontFamily="Bombardier"
+                                   FontSize="15"
+                                   TextColor="{StaticResource Gray100}"/>
                             <DatePicker x:Name="dtpck_checkout"
                                         Format="dd/MM/yyyy"/>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar"/>
+                <Button Text="Avançar" Clicked="Button_Clicked" Margin="5" />
+                <Button Text="Sobre" Clicked="Button_Clicked_1" HorizontalOptions="Center" BackgroundColor="Gray"/>
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>

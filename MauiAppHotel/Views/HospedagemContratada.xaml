@@ -2,11 +2,65 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratada"
-             Title="HospedagemContratada">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray900}">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Label Text="Suíte Super Luxo"
+               FontFamily="Trajan"
+               FontSize="35"
+               TextColor="{StaticResource White}"
+               HorizontalOptions="Center"/>
+        <Frame Margin="5" HorizontalOptions="Center">
+            <HorizontalStackLayout>
+                <HorizontalStackLayout Margin="10">
+                    <Label Text="Adultos: "
+                           FontFamily="Andy"
+                           FontSize="20"/>
+                    <Label Text=" 2" 
+                           TextColor="{StaticResource Yellow}" 
+                           FontFamily="Andy"
+                           FontSize="20"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="10">
+                    <Label Text="Crianças: "
+                           FontFamily="Andy"
+                           FontSize="20"/>
+                    <Label Text=" 2" 
+                           TextColor="{StaticResource Yellow}" 
+                           FontFamily="Andy"
+                           FontSize="20"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Margin="10">
+            <Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in:" FontFamily="Bombardier" HorizontalOptions="Start"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out:" FontFamily="Bombardier" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:" FontFamily="Bombardier" HorizontalOptions="End"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="01/11/2025" FontFamily="Bombardier" HorizontalOptions="Start"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="06/11/2025" FontFamily="Bombardier" HorizontalOptions="Center"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="5 dias" FontFamily="Bombardier" HorizontalOptions="End"/>
+            </Grid>
+        </Frame>
+
+        <Frame Margin="10">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Valor Total:"
+                       FontFamily="Andy"
+                       FontSize="20"/>
+                <Label Text=" R$5,00"
+                       FontFamily="Andy"
+                       TextColor="{StaticResource Yellow}"
+                       FontSize="20"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar" 
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"/>
     </VerticalStackLayout>
+    
 </ContentPage>
