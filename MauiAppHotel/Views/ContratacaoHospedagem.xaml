@@ -61,16 +61,20 @@
                               Maximum="10"
                               Increment="1"/>
                 </Grid>
-
-                <Label Text="Escolha sua Suíte"
+                <Frame Padding="10"
+                       Margin="10">
+                    <VerticalStackLayout>
+                        <Label Text="Escolha sua Suíte"
                        FontFamily="Bombardier"
                        HorizontalOptions="Center"
                        FontSize="20"/>
 
-                <Picker x:Name="pck_quarto"
+                        <Picker x:Name="pck_quarto"
                         Title="Selecione sua Acomodação"
                         FontFamily="Bombardier"
                         ItemDisplayBinding="{Binding Descricao}"/>
+                    </VerticalStackLayout>
+                </Frame>
 
                 <Frame Padding="10"
                        Margin="10">

@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource Gray900}">
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
-        <Label Text="Suíte Super Luxo"
+        <Label Text="{Binding QuartoSelecionado.Descricao}"
                FontFamily="Trajan"
                FontSize="35"
                TextColor="{StaticResource White}"
@@ -16,7 +16,7 @@
                     <Label Text="Adultos: "
                            FontFamily="Andy"
                            FontSize="20"/>
-                    <Label Text=" 2" 
+                    <Label Text="{Binding QntAdultos, StringFormat='{} {0}'}"
                            TextColor="{StaticResource Yellow}" 
                            FontFamily="Andy"
                            FontSize="20"/>
@@ -25,7 +25,7 @@
                     <Label Text="Crianças: "
                            FontFamily="Andy"
                            FontSize="20"/>
-                    <Label Text=" 2" 
+                    <Label Text="{Binding QntCriancas, StringFormat='{} {0}'}" 
                            TextColor="{StaticResource Yellow}" 
                            FontFamily="Andy"
                            FontSize="20"/>
@@ -40,9 +40,15 @@
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-out:" FontFamily="Bombardier" HorizontalOptions="Center"/>
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia:" FontFamily="Bombardier" HorizontalOptions="End"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="01/11/2025" FontFamily="Bombardier" HorizontalOptions="Start"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="06/11/2025" FontFamily="Bombardier" HorizontalOptions="Center"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="5 dias" FontFamily="Bombardier" HorizontalOptions="End"/>
+                <Label Grid.Row="1" Grid.Column="0" 
+                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" 
+                       FontFamily="Bombardier" HorizontalOptions="Start"/>
+                <Label Grid.Row="1" Grid.Column="1" 
+                       Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" 
+                       FontFamily="Bombardier" HorizontalOptions="Center"/>
+                <Label Grid.Row="1" Grid.Column="2" 
+                       Text="{Binding Estadia, StringFormat='{}{0:} dias'}" 
+                       FontFamily="Bombardier" HorizontalOptions="End"/>
             </Grid>
         </Frame>
 
@@ -51,7 +57,7 @@
                 <Label Text="Valor Total:"
                        FontFamily="Andy"
                        FontSize="20"/>
-                <Label Text=" R$5,00"
+                <Label Text="{Binding ValorTotal, StringFormat='{} {0:c}'}"
                        FontFamily="Andy"
                        TextColor="{StaticResource Yellow}"
                        FontSize="20"/>
